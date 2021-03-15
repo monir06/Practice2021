@@ -1,4 +1,7 @@
- // beware with set functions to avoid tle
+// beware with set functions to avoid tle
+// Time complexity 
+// erase(position) --> amortized constant.
+//erase(val) --> logarithmic in container size.
  class Solution {
 public:
     static bool cmp(vector<int> &a,vector<int> &b)
