@@ -1,4 +1,4 @@
- # beware with set functionalities to avoid tle
+ // beware with set functions to avoid tle
  class Solution {
 public:
     static bool cmp(vector<int> &a,vector<int> &b)
