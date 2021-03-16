@@ -1,6 +1,6 @@
-## No need to Solve (Easy/Already solved)
+## No need to Solve (Easy/Type already solved)
 1. https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/ 
-
+2. https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
 
 
 ## To-do/To Check
