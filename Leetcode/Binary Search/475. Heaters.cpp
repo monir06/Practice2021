@@ -1,3 +1,31 @@
+// optimizable
+
+
+// O(n*log(m))
+class Solution {
+public:
+    int closestdist(int &val,vector<int>& heaters)
+    {
+        auto lb=lower_bound(heaters.begin(),heaters.end(),val);
+        if(lb==heaters.end()) lb--;
+        auto lb2=lb;
+        if(lb2!=heaters.begin()) lb2--;
+        return min(abs(*lb2-val),abs(*lb-val));
+    }
+        
+    int findRadius(vector<int>& houses, vector<int>& heaters) {
+        sort(heaters.begin(),heaters.end());
+        int mn=0;
+        for(auto &i:houses)
+        {
+            mn=max(mn,closestdist(i,heaters));
+        }
+        return mn;
+    }
+};
+
+
+// O(n*log(INT_MAX)*log(m))
 class Solution {
 public:
     int findRadius(vector<int>& houses, vector<int>& heaters) {
