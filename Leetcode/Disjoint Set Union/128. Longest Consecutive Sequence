@@ -1,0 +1,47 @@
+// seems to be not a typical dsu problem, can be solved with other process easily (also see the binary search solution on binary search section)
+// Idea =======>
+// take any number as parent between any consecutive number's set. apply dsu by size (keeping answer/set size on size array)
+// get max ans from size array for the vector
+// nums = [100,4,200,1,3,2]
+// Output: 4
+// Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
+// so for any consecutive element's set, eg: 1,2,3,4 we take anyone to set parent pairwise.. 
+// than while union of two number, upon size of size array, we set parent and move the size to the respectable parent's size array.  
+// we find max from size array on final loop 
+
+class Solution {
+public:
+    unordered_map<int,int> par,rank;
+    int find_set(int &v) {
+    if (v == par[v])
+        return v;
+    return par[v] = find_set(par[v]);
+    }
+    void union_sets(int a, int b) {
+    a = find_set(a);
+    b = find_set(b);
+    if(a!=b) {
+    if (rank[a]<rank[b])
+        swap(a, b);
+     par[b] = a;
+     rank[a] += rank[b];
+     }
+    }
+    int longestConsecutive(vector<int>& nums) {
+        
+        for(auto &i:nums) {par[i]=i;rank[i]=1;}
+        for(auto &i:nums)
+        {
+            if(par.count(i-1))
+            {
+                union_sets(i-1,i);
+            }
+        }
+        int mx=0;
+        for(auto &i:nums)
+        {
+            if(par[i]==i) mx=max(mx,rank[i]);
+        }
+        return mx;
+    }
+};
