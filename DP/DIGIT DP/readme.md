@@ -21,6 +21,7 @@
     
     
     xor from 1 to n =>
+    
     ll cxr(ll n){
       ll md = n % 4;
       if (md == 0) return n;
