@@ -1,3 +1,11 @@
+# Resources 
+1. https://codeforces.com/blog/entry/53960
+2. https://shakilcompetitiveprogramming.blogspot.com/2015/09/digit-dp.html?fbclid=IwAR0nJCOrPjlkKMUu6MqUXeB_bPl9swfGvPwJre2h5Z0Tfi2NAJhQlHHS0Po
+3. https://www.youtube.com/watch?v=6z9DGDoFqEU
+4. https://returnzerooo.wordpress.com/2018/08/25/digit-dp-%e0%a6%a1%e0%a6%bf%e0%a6%9c%e0%a6%bf%e0%a6%9f-%e0%a6%a1%e0%a6%bf%e0%a6%aa%e0%a6%bf/
+5. https://saisumit.wordpress.com/2016/11/27/digit-dp-one-code-to-rule-em-all/
+6. https://catchharsh.github.io/2019-07-06-DigitDP/
+7. ত্রালো
 # To-dos
 1. https://toph.co/c/operation-coding (problem b) solution: https://pastebin.ubuntu.com/p/7KKqV4k3Gf/
     
@@ -29,5 +37,6 @@
       else if (md == 2) return n + 1;
       else return 0;
     }
-  2. 
+  2. https://www.codechef.com/problems/STRAB
+  3. https://www.spoj.com/problems/BINPRNUM/
     
